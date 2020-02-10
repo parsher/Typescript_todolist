@@ -1,0 +1,25 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "todolist with typescript, scss",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run compile",
+    "start": "./node_modules/.bin/http-server",
+    "compile": "npm run compile:sass & npm run compile:ts",
+    "compile:sass": "node-sass sass/style.scss css/style.css",
+    "compile:ts": "tsc",
+    "watch": "npm run watch:sass & npm run watch:ts",
+    "watch:sass": "node-sass sass/style.scss css/style.css -w",
+    "watch:ts": "tsc -w"
+  },
+  "author": "MINJUN MOON",
+  "license": "private",
+  "devDependencies": {
+    "http-server": "^0.12.1",
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "@types/js-base64": "^2.3.1"
+  }
+}

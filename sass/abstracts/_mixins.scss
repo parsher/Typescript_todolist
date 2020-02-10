@@ -1,0 +1,51 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    color: $color; // Edge
+  }
+
+  &:-ms-input-placeholder {
+    color: $color; // IE 10-11
+  }
+
+  &::placeholder {
+    color: $color;
+  }
+}
+
+@mixin contentEditable {
+  outline: none;
+  word-break: break-word;
+  border-bottom: 1px solid transparent;
+  margin-bottom: .8rem;
+
+  // underline
+  &:focus {
+    border-bottom: 1px solid $color-white;
+    box-shadow: 0 1px 0 0 $color-white;
+  }
+
+  &:empty:not(:focus):before {
+    content: attr(placeholder);
+    display: block; // firefox;
+  }
+}
+
+@mixin contentPadding {
+  padding: 3rem 10%;
+  
+  @media screen and (min-width: $break-point-small)  {
+    padding: 3rem 14%;
+  }
+
+  @media screen and (min-width: $break-point-big)  {
+    padding: 3rem 16%;
+  }
+}

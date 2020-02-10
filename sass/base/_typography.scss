@@ -1,0 +1,22 @@
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 400; // only 400 supported by Song Myung
+  font-size: $default-font-size;
+  line-height: 1.7;
+  color: $color-white;
+}
+
+.heading-primary {
+  color: $color-tertiary;
+  text-transform: uppercase;
+}
+
+.heading-secondary {
+  color: $color-tertiary;
+  text-transform: uppercase;
+}
+
+// https://dev.materialdesignicons.com/guide/iconify
+[data-icon^="mdi-"] {
+  font-size: 2.5rem;
+}

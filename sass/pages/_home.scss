@@ -1,0 +1,50 @@
+.todo-section {
+  width: 100%;
+  min-height: 50vh;
+  position: relative;
+  
+  @include contentPadding;
+
+  &--todo {
+    background-color: $color-primary-light;
+  }
+
+  &--done {
+    background-color: $color-secondary-light;
+  }
+
+  &__list {
+    @include clearfix;
+  }
+
+  @include clearfix;
+}
+
+
+body {
+  &.todo-section-filter--done {
+    background-color: $color-secondary-light;
+
+    .todo-section--done {
+      min-height: 100vh;
+    }
+
+    .todo-section--todo {
+      display: none;
+    }
+  }
+
+  &.todo-section-filter--todo {
+    footer {
+      background-color: $color-primary-light;
+    }
+
+    .todo-section--todo {
+      min-height: 100vh;
+    }
+
+    .todo-section--done {
+      display: none;
+    }
+  }
+}

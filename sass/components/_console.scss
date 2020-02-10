@@ -1,0 +1,21 @@
+.console {
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  background-color: $color-tertiary;
+  width: 100%;
+
+  @include contentPadding;
+
+  &__content {
+    @include contentEditable;
+  }
+
+  &__enter {
+    float: left;
+  }
+
+  &__filter {
+    float: right;
+  }
+}

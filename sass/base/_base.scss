@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // define 1 rem === 10px, default 16px
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-primary-light;
+  margin: 0 auto;
+  height: 100%;
+}
+
+a:link,
+a:visited {
+  color: $color-white;
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover {
+  color: rgba($color-black, .5);
+  outline: none;
+}
