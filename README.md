@@ -3,7 +3,7 @@
 ## 실행
 
 > npm install
-> npm start
+> npm run dev
 
 브라우저로 http://127.0.0.1:8080 접속
 
